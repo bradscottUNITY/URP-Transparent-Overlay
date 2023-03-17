@@ -17,12 +17,12 @@ MonoBehaviour:
   m_Settings:
     Downsample: 0
     AfterOpaque: 0
-    Source: 1
-    NormalSamples: 1
+    Source: 0
+    NormalSamples: 2
     Intensity: 0.5
     DirectLightingStrength: 0.25
-    Radius: 0.25
-    SampleCount: 4
+    Radius: 0.57
+    SampleCount: 12
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_DepthPrimingMode: 1
-  m_CopyDepthMode: 2
+  m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_ClusteredRendering: 0
   m_TileSize: 32
@@ -95,16 +95,10 @@ MonoBehaviour:
   m_Name: Transparent Vehicles
   m_EditorClassIdentifier: 
   m_Active: 1
-  m_CopyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
-  m_CopyColorPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
-  m_BlitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+  opacity: 0.669
   m_TransparentPassSettings:
     renderMaterial: {fileID: 2100000, guid: a09d8d1b820e0b84a99f1d43d4402826, type: 2}
-    blitMaterial: {fileID: 2100000, guid: d9016f8af20922b4388210791527d538, type: 2}
-    LayerMask:
-      serializedVersion: 2
-      m_Bits: 64
+    passIndex: 0
     colorTexture: {fileID: 8400000, guid: d801b1f2ad01eb846a36fc8ac84f9457, type: 2}
     renderTexture: {fileID: 8400000, guid: aec6150510a1a214aa02aecfa88e76ae, type: 2}
-    renderQueueType: 0
-    clearFlag: -1
+    midTexture: {fileID: 8400000, guid: e2aba0f2448c8e44cb686587f86455f0, type: 2}
